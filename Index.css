@@ -1,0 +1,147 @@
+/* REINICIO BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* FONDO HECHO CON CSS */
+body {
+    height: 100vh;
+    background-color: #fbd6e0;
+    background-image: linear-gradient(#f7b2c4, #fbd6e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR DEL LOGIN */
+.login-container {
+    width: 90%;
+    max-width: 350px;
+    padding: 30px;
+    background-color: #fff0f6;
+    border-radius: 18px; /* esquinas curveadas */
+    text-align: center;
+
+    /* marco iluminado */
+    box-shadow: 0px 0px 15px #e75480,
+                0px 10px 25px #999;
+}
+
+/* IMAGEN CON SOMBRA */
+.avatar img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 8px 20px #666;
+}
+
+/* TEXTO DE BIENVENIDA */
+h2 {
+    color: #b03060;
+    margin-bottom: 25px;
+    text-decoration: underline; /* letras con línea */
+
+    /* transición suave */
+    opacity: 0;
+    animation: aparecer 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/* ANIMACIÓN SIMPLE */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* INPUTS */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px; /* inputs separados */
+    border-radius: 10px;
+    border: 1px solid #f0b6cc;
+    font-size: 14px;
+}
+
+/* CONTENEDOR PASSWORD */
+.password-box {
+    position: relative;
+}
+
+/* OJO (NO FUNCIONAL) */
+.password-box .eye {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    font-size: 16px;
+    color: #b03060;
+}
+
+/* BOTÓN */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: #e75480;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* EFECTO HOVER BÁSICO */
+button:hover {
+    background-color: #ff6fae;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 25px;
+    }
+}
+
+/* ANIMACIÓN DEL ENCUADRE DEL LOGIN */
+.login-container {
+    opacity: 0;
+    animation: mostrarLogin 1.5s ease forwards;
+}
+
+/* ANIMACIÓN BÁSICA */
+@keyframes mostrarLogin {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* CONTENEDOR PARA INPUTS CON OJO (correo y contraseña) */
+.input-box {
+    position: relative;
+}
+
+/* OJITO DECORATIVO (NO FUNCIONAL) */
+.input-box .eye {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    font-size: 16px;
+    color: #b03060;
+    cursor: default;
+}
+
+
+
